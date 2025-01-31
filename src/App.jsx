@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect } from 'react';
 import './App.scss'
 import logo from './assets/logo.svg'
 import action from './assets/ilustracao-page2/action.svg';
@@ -23,8 +23,38 @@ import videoFighter from './assets/ilustracao-page3/videoFighter.svg';
 import videoAnimation from './assets/ilustracao-page3/videoAnimation.svg';
 import videoAction from './assets/ilustracao-page3/videoAction.svg';
 import videoRacing from './assets/ilustracao-page3/videoRacing.svg';
+import ScrollReveal from 'scrollreveal';
 
 function App() {
+
+  useEffect(() => {
+    ScrollReveal().reveal('.hero-container, .categorias, .content-games1, .content-games2, .trending', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('header, .navegation', {
+      origin: 'top',
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('.card, .card-gameRecents', {
+      origin: 'right',
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+  }, []);
 
   const Header = () => {
     return (

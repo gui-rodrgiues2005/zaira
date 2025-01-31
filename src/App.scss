@@ -226,7 +226,6 @@ header {
 }
 
 /*page2*/
-
 .page2 {
   margin-top: 50px;
 
@@ -1047,7 +1046,6 @@ header {
   }
 }
 
-
 .footer {
   width: 100%;
   background-color: #0a0a0a;
@@ -1120,5 +1118,28 @@ header {
     border-top: 1px solid #333;
     padding-top: 1rem;
     font-size: 0.8rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+  
+  flex-direction: column;
+    text-align: center;
+
+    nav {
+      margin-top: 10px;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
   }
 }
