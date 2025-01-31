@@ -1,0 +1,1124 @@
+/*RESET*/
+html,
+body {
+  overflow-x: hidden;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Manrope", serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*header*/
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #12253E;
+
+  .search-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .search {
+      input {
+        background-color: transparent;
+        width: 400px;
+        height: 45px;
+        outline: none;
+        border-radius: 50px;
+        border: solid 1px #8199B7;
+        color: #8199B7;
+        cursor: pointer;
+        padding-left: 15px;
+
+        &::placeholder {
+          color: #8199B7;
+        }
+      }
+
+      i {
+        position: relative;
+        color: #FFF;
+        font-size: 20px;
+        left: -10%;
+        top: 3%;
+        cursor: pointer;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+      color: #FFF;
+      cursor: pointer;
+
+      i {
+        transition: color 0.1s ease-in;
+
+        &:hover {
+          color: #8199B7;
+        }
+      }
+    }
+  }
+}
+
+/*navegação*/
+.navegation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #183354;
+  width: 100%;
+  height: 60px;
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: #FFF;
+          font-size: 15px;
+          font-weight: bold;
+          transition: color 0.1s ease-in;
+          cursor: pointer;
+
+          &:hover {
+            color: #F4796C;
+          }
+        }
+      }
+
+      i {
+        font-size: 15px;
+        color: #6D757F;
+        transition: color 0.1s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          color: #F4796C;
+        }
+      }
+    }
+  }
+
+  .account-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    i {
+      color: #90A8C5;
+      font-size: 25px;
+      transition: color 0.1s ease-in;
+      cursor: pointer;
+
+      &:hover {
+        color: #8199B7;
+      }
+    }
+
+    .account {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      p {
+        color: #FFF;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*page1*/
+.hero-container {
+  display: flex;
+  /* Garante que os itens fiquem lado a lado */
+  width: 100%;
+  height: 400px;
+
+
+  .hero-item {
+    position: relative;
+    flex: 1;
+    /* Faz com que ambos os itens ocupem 50% da largura */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .left {
+    background-image: url("./assets/ilustracao-page1/img1-page1.svg");
+    /* Troque pelo caminho real da imagem */
+  }
+
+  .right {
+    background-image: url("./assets/ilustracao-page1/img2-page1.svg");
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Deixa a imagem escurecida */
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  .fighter {
+    background-color: red;
+  }
+
+  .action {
+    background-color: blue;
+  }
+}
+
+/*page2*/
+
+.page2 {
+  margin-top: 50px;
+
+  .categorias {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .title-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    background-color: #F4796C;
+    margin-bottom: 20px;
+
+    h3 {
+      color: #FFF;
+      font-weight: bold;
+    }
+  }
+
+  .section-images {
+    img {
+      width: 150px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+
+  .anuncio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    img {
+      width: 800px;
+    }
+  }
+
+  /*divisão segunda página*/
+  .todaySpotlinght {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 30px;
+    margin: 0 auto;
+
+    .secao-spotlight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+
+    .title-spotlinght {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 40px;
+      background-color: #F4796C;
+      margin-bottom: 20px;
+
+      h3 {
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+
+    .div1 {
+      .text-racing {
+        .title-racing {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 24px;
+          border-radius: 3px;
+          background-color: transparent;
+          border: solid 1px #6D757F;
+          margin-top: 10px;
+
+          h4 {
+            color: #6D757F;
+          }
+
+        }
+      }
+
+      p {
+        font-size: 28px;
+        color: #183354;
+        font-weight: bold;
+      }
+
+      .stastitics-racing {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: -20px;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .texts-stastistics-racing {
+            color: #6D757F;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1;
+          }
+
+          i {
+            color: #6D757F;
+          }
+        }
+      }
+    }
+
+    .div2 {
+      .card {
+        .texts {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+
+          .gamings {
+            .title-racing {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 72px;
+              height: 24px;
+              border-radius: 3px;
+              background-color: transparent;
+              border: solid 1px #6D757F;
+              margin-top: 10px;
+
+              h4 {
+                color: #6D757F;
+              }
+            }
+
+            h3 {
+              color: #183354;
+              font-weight: bold;
+              font-size: 20px;
+            }
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              p {
+                color: #6D757F;
+                font-size: 13px;
+                letter-spacing: 1;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ourPopular {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 30px;
+    margin: 0 auto;
+
+
+    .content-popular1 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 30px;
+      margin-left: -10px;
+    }
+
+    .content-popular2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .title-popular-news {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 40px;
+      background-color: #F4796C;
+      margin-bottom: 20px;
+
+      h3 {
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+
+    .content-popular1 {
+      .racing-car {
+        background-image: url("./assets/ilustracao-page2/racingPopular.svg");
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 300px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .texts {
+          position: relative;
+          top: 40%;
+          left: 5%;
+
+          .title-racing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 26px;
+            background-color: #ffffff3d;
+            border-radius: 3px;
+            border: none;
+
+            h3 {
+              color: #FFF;
+              font-weight: bold;
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .stastitics {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              color: #6D757F;
+              font-size: 13px;
+              letter-spacing: 1;
+              font-weight: bold;
+            }
+
+            i {
+              color: #6D757F;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .action-game {
+        background-image: url("./assets/ilustracao-page2/actionPopular.svg");
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 300px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .texts {
+          position: relative;
+          top: 40%;
+          left: 5%;
+
+          .title-racing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 26px;
+            background-color: #ffffff3d;
+            border-radius: 3px;
+            border: none;
+
+            h3 {
+              color: #FFF;
+              font-weight: bold;
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .stastitics {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              color: #6D757F;
+              font-size: 13px;
+              letter-spacing: 1;
+              font-weight: bold;
+            }
+
+            i {
+              color: #6D757F;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .content-popular2 {
+      .cards-action {
+        background-image: url("./assets/ilustracao-page2/fighterPopular.svg");
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 300px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+        .title-populares {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 26px;
+          background-color: #ffffff3d;
+          border-radius: 3px;
+          border: none;
+
+          h3 {
+            color: #FFF;
+            font-weight: bold;
+            font-size: 13px;
+          }
+        }
+
+        .texts {
+          position: relative;
+          top: 45%;
+          left: -10%;
+
+          .title-racing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 26px;
+            background-color: #ffffff3d;
+            border-radius: 3px;
+            border: none;
+
+            h3 {
+              color: #FFF;
+              font-weight: bold;
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .stastitics {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              color: #6D757F;
+              font-size: 13px;
+              letter-spacing: 1;
+              font-weight: bold;
+            }
+
+            i {
+              color: #6D757F;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .cards-animation {
+        background-image: url("./assets/ilustracao-page2/animationPopular.svg");
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 300px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+        .title-populares {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 26px;
+          background-color: #ffffff3d;
+          border-radius: 3px;
+          border: none;
+
+          h3 {
+            color: #FFF;
+            font-weight: bold;
+            font-size: 13px;
+          }
+        }
+
+        .texts {
+          position: relative;
+          top: 45%;
+          left: -10%;
+
+          .title-racing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 26px;
+            background-color: #ffffff3d;
+            border-radius: 3px;
+            border: none;
+
+            h3 {
+              color: #FFF;
+              font-weight: bold;
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .stastitics {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              color: #6D757F;
+              font-size: 13px;
+              letter-spacing: 1;
+              font-weight: bold;
+            }
+
+            i {
+              color: #6D757F;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .cards-story {
+        background-image: url("./assets/ilustracao-page2/storyPopular.svg");
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 300px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+        .title-populares {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 26px;
+          background-color: #ffffff3d;
+          border-radius: 3px;
+          border: none;
+
+          h3 {
+            color: #FFF;
+            font-weight: bold;
+            font-size: 13px;
+          }
+        }
+
+        .texts {
+          position: relative;
+          top: 45%;
+          left: -10%;
+
+          .title-racing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 26px;
+            background-color: #ffffff3d;
+            border-radius: 3px;
+            border: none;
+
+            h3 {
+              color: #FFF;
+              font-weight: bold;
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .stastitics {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              color: #6D757F;
+              font-size: 13px;
+              letter-spacing: 1;
+              font-weight: bold;
+            }
+
+            i {
+              color: #6D757F;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .recentPosts {
+    margin-left: -15%;
+
+    .card-gameRecents {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+    }
+
+    .title-recentsPosts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 40px;
+      background-color: #F4796C;
+      margin-bottom: 20px;
+
+      h3 {
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+
+    .texts-gamesRecents {
+      .title-recents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 24px;
+        border-radius: 3px;
+        background-color: transparent;
+        border: solid 1px #6D757F;
+        margin-top: 20px;
+
+        h4 {
+          color: #6D757F;
+          font-size: 13px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: #183354;
+        font-weight: bold;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        margin-top: -20px;
+
+        .texts-stastistics-racing {
+          color: #6D757F;
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1;
+
+        }
+
+        i {
+          color: #6D757F;
+        }
+      }
+
+    }
+  }
+
+  .content-games2 {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    margin-left: -8%;
+  }
+
+  .freeGamingAnuncio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    img {
+      width: 800px;
+    }
+  }
+
+}
+
+.page3 {
+  width: 100%;
+  height: 700px;
+  background-image: url('./assets/ilustracao-page3/fundoPage3.svg');
+  background-repeat: no-repeat;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .title-gamingNews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    background-color: #F4796C;
+    margin-bottom: 20px;
+
+    h3 {
+      color: #FFF;
+      font-weight: bold;
+    }
+  }
+
+  .container-fighter {
+    display: flex;
+    gap: 50px;
+  }
+
+  .text-racing {
+    .title-racing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 24px;
+      border-radius: 3px;
+      background-color: transparent;
+      border: solid 1px #6D757F;
+      margin-top: 10px;
+
+      h4 {
+        color: #6D757F;
+      }
+
+    }
+  }
+
+  p {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .stastitics-racing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -20px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .texts-stastistics-racing {
+        color: #6D757F;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1;
+      }
+
+      i {
+        color: #6D757F;
+      }
+    }
+  }
+
+  .posts-view {
+    .card-gameRecents {
+      display: flex;
+      gap: 20px;
+
+      .texts-gamesRecents {
+        .title-recents {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 24px;
+          border-radius: 3px;
+          background-color: #6D757F;
+          border: solid 1px #6D757F;
+          margin-top: 20px;
+
+          h4 {
+            color: #FFF;
+            font-size: 13px;
+          }
+        }
+
+        p {
+          font-size: 22px;
+          color: #FFF;
+        }
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+
+          i {
+            color: #BACCE1;
+            font-size: 13px;
+          }
+
+          p {
+            color: #BACCE1;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  width: 100%;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__brand {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  img {
+    width: 100px;
+    margin-top: 40px;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &__column {
+    margin: 1rem;
+    text-align: left;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #ff6b6b;
+      display: inline-block;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      li:hover {
+        color: #ff6b6b;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+}
